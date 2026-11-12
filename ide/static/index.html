@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Builder IDE</title>
+<link rel="stylesheet" href="/style.css">
+<script defer src="/app.js"></script>
+</head>
+<body>
+<header><strong>Agent Builder</strong><span id="project-title"></span><span class="mode">Fixture runtime</span></header>
+<div class="workspace">
+<aside aria-label="Project navigation">
+<label for="project">Project</label><select id="project"></select>
+<details open><summary>Workflow</summary><ol id="workflow"></ol></details>
+<details open><summary>Project files</summary><div id="files"></div></details>
+</aside>
+<main>
+<h1 id="stage">Architecture review</h1>
+<p id="error" role="alert"></p>
+<div class="toolbar"><button id="start">Start or resume run</button><button id="begin" hidden>Begin layer review</button><button id="refresh" hidden>Refresh review revision</button><button id="generate" hidden>Check generation gate</button></div>
+<details id="artifact-panel" open><summary id="artifact-title">Architecture draft</summary><pre id="artifact"></pre></details>
+<section aria-label="Builder conversation">
+<h2>Conversation</h2>
+<div id="conversation" role="log"></div>
+<form id="decision" hidden>
+<h3>Decision under review</h3><pre id="proposal"></pre>
+<label for="answer">Your answer or revision request</label>
+<textarea id="answer" maxlength="4000" rows="3"></textarea>
+<div class="toolbar"><button type="submit" id="send">Send answer</button><button type="button" id="keep">Keep proposal</button><button type="button" id="revise">Request revision</button><button type="button" id="approve">Approve layer</button></div>
+</form>
+</section>
+</main>
+<aside class="evidence" aria-label="Evidence">
+<details open><summary>Visual review</summary><p id="visual-status"></p><div id="diagrams"></div></details>
+<details><summary>Skills</summary><div id="skill-runs"></div><div class="toolbar"><button id="fail-skill" disabled>Simulate skill failure</button><button id="retry-skill" disabled>Retry skill</button></div><div id="skills"></div></details>
+</aside>
+</div>
+<details class="drawer" open><summary>Run logs and verification</summary>
+<div class="toolbar">
+<label>Stage <select id="log-stage"></select></label>
+<label>Skill <select id="log-skill"></select></label>
+<label>Severity <select id="log-severity"><option value="">All</option><option>Info</option><option>Error</option></select></label>
+</div>
+<div id="logs"></div><div id="tests"></div>
+</details>
+</body>
+</html>

@@ -1,0 +1,38 @@
+:root { color-scheme:dark; font:14px/1.55 Inter,system-ui,sans-serif; color:#ebeff5; background:#13171e; }
+* { box-sizing:border-box; }
+body { margin:0; }
+header { position:sticky; top:0; z-index:2; display:flex; align-items:center; gap:18px; padding:12px 20px; background:#202631; border-bottom:1px solid #384253; }
+header strong {font-size:1.1rem;}
+.mode {margin-left:auto;color:#abdff0;}
+.workspace {display:grid;grid-template-columns:minmax(165px,1fr) minmax(0,3fr) minmax(205px,1.35fr);min-height:65vh;}
+aside, main, .drawer {padding:16px;min-width:0;}
+aside {background:#191e27;}
+main {border-inline:1px solid #384253;}
+aside details, main details {margin-top:14px;}
+summary {cursor:pointer;font-weight:650;color:#bfddf6;}
+h1 {margin:0;font-size:1.55rem;}
+h2 {font-size:1.06rem;}
+button,select,textarea {font:inherit;color:inherit;background:#263245;border:1px solid #50627a;border-radius:5px;padding:6px 9px;}
+button {cursor:pointer;}
+button:disabled {opacity:.55;cursor:default;}
+button:focus-visible,summary:focus-visible {outline:2px solid #8bcbff;}
+select {max-width:100%;}
+#project {display:block;width:100%;margin-top:4px;}
+#files button {display:block;width:100%;text-align:left;overflow-wrap:anywhere;margin:5px 0;}
+#workflow {padding-left:22px;}
+#workflow li {margin:5px 0;}
+.toolbar {display:flex;gap:8px;flex-wrap:wrap;margin:10px 0;}
+pre {white-space:pre-wrap;overflow-wrap:anywhere;background:#191e27;padding:12px;border-radius:6px;max-height:42vh;overflow:auto;}
+textarea {display:block;width:100%;margin-top:4px;}
+#error {color:#ffa8a8;}
+#conversation p {padding:8px 12px;background:#202631;border-radius:6px;white-space:pre-wrap;overflow-wrap:anywhere;}
+#diagrams details {border-bottom:1px solid #384253;padding-bottom:8px;}
+.diagram {overflow:auto;background:#202631;margin:8px 0;padding:8px;}
+.diagram svg {min-width:300px;}
+.drawer {border-top:1px solid #384253;}
+#logs {max-height:220px;overflow:auto;}
+#logs p {margin:4px 0;overflow-wrap:anywhere;}
+a {color:#a9d7ff;}
+[hidden] {display:none!important;}
+@media(max-width:900px){.workspace{grid-template-columns:180px minmax(0,1fr);}.evidence{grid-column:1/-1;border-top:1px solid #384253;}}
+@media(max-width:550px){.workspace{display:block;}main{border:0;}header{gap:8px;flex-wrap:wrap;}}

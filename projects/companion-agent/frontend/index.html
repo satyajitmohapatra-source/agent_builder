@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Chotu Companion · Playback Test</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="player.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p>CHOTU COMPANION / PORT 0</p>
+      <h1>Playback test</h1>
+    </header>
+    <form id="track-form">
+      <label for="video">YouTube video URL or ID</label>
+      <div class="row">
+        <input id="video" required value="M7lc1UVf-VE" spellcheck="false">
+        <button type="submit" id="send" disabled>Simulate play command</button>
+      </div>
+    </form>
+    <section aria-label="Tab routing test">
+      <p>This tab ID <code id="tab-id">Unavailable</code></p>
+      <form id="remote-form">
+        <label for="target-tab">Target tab ID</label>
+        <div class="row">
+          <input id="target-tab" required spellcheck="false" autocomplete="off">
+          <button id="send-remote" disabled>Send to tab</button>
+          <button id="replay-remote" type="button" disabled>Replay command</button>
+        </div>
+      </form>
+      <p id="remote-status" role="status"></p>
+    </section>
+    <section aria-label="YouTube player" class="screen"><div id="player"></div></section>
+    <p id="status" role="status">Loading YouTube player…</p>
+    <div class="row controls" aria-label="Local playback controls">
+      <button type="button" id="play" disabled>Play / Resume</button>
+      <button type="button" id="pause" disabled>Pause</button>
+      <button type="button" id="stop" disabled>Stop</button>
+      <label for="volume">Volume</label>
+      <input type="range" id="volume" min="0" max="100" value="70" disabled>
+    </div>
+    <section aria-labelledby="events-heading">
+      <h2 id="events-heading">Playback events</h2>
+      <ol id="events" aria-label="Recent playback events"></ol>
+    </section>
+  </main>
+</body>
+</html>

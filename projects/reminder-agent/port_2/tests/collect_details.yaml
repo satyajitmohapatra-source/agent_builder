@@ -1,0 +1,17 @@
+# © 2026 Diya Mohapatra and Satyajit Mohapatra. All rights reserved. This document and its
+# contents are confidential and proprietary to the Owners. No part of this document, including
+# its concepts, ideas as expressed, strategies, structure, designs, methodologies, or commercial
+# proposals, may be copied, reproduced, adapted, modified, distributed, disclosed, or used to
+# create any identical, substantially similar, or derivative material without the prior written
+# consent of the Owners. Unauthorised use, disclosure, reproduction, or distribution is
+# prohibited and may result in legal action under applicable Indian law. Subject to applicable
+# law, disputes shall fall within the jurisdiction of the competent courts at Cuttack, Odisha,
+# where legally maintainable.
+
+name: ask for all missing details and retain the partial reply
+persona: {tier: C, language: en}
+steps:
+  - say: Set a reminder
+    expect: {status: needs_input, says: [What should I remind you about]}
+  - say: Water the plants
+    expect: {status: needs_input, says: [What day should I remind you]}

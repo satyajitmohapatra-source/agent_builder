@@ -1,0 +1,94 @@
+{
+  "agent_id": "reminder-example",
+  "version": "0.1.0",
+  "port": 2,
+  "used_db": false,
+  "passed": true,
+  "sessions": 11,
+  "boxes": [
+    {
+      "number": 1,
+      "title": "Manifest loads; contract_version is supported; ceiling and scopes are within the agreed values",
+      "passed": true,
+      "not_run": null,
+      "problems": []
+    },
+    {
+      "number": 2,
+      "title": "Exactly one TurnResult per turn; first sentence and whole turn within budget",
+      "passed": true,
+      "not_run": null,
+      "problems": []
+    },
+    {
+      "number": 3,
+      "title": "A repeated turn_id replays without re-running",
+      "passed": true,
+      "not_run": null,
+      "problems": []
+    },
+    {
+      "number": 4,
+      "title": "Every sentence passes the speech rules, for every persona tier",
+      "passed": true,
+      "not_run": null,
+      "problems": []
+    },
+    {
+      "number": 5,
+      "title": "Suspend finishes within 2 s and produces no output; resume continues from the saved step; cancel is silent",
+      "passed": true,
+      "not_run": null,
+      "problems": []
+    },
+    {
+      "number": 6,
+      "title": "A restart mid-task loses nothing",
+      "passed": true,
+      "not_run": null,
+      "problems": []
+    },
+    {
+      "number": 7,
+      "title": "No synchronous network or file calls; no database access (reads through ctx.data, changes through ctx.actions)",
+      "passed": true,
+      "not_run": null,
+      "problems": []
+    },
+    {
+      "number": 8,
+      "title": "Publishing above the ceiling fails; every event has an expiry; scheduled nudges use deliver_at",
+      "passed": true,
+      "not_run": null,
+      "problems": []
+    },
+    {
+      "number": 9,
+      "title": "Duplicate outcomes are handled",
+      "passed": true,
+      "not_run": null,
+      "problems": []
+    },
+    {
+      "number": 10,
+      "title": "run_background (if used) stops cleanly when cancelled",
+      "passed": true,
+      "not_run": null,
+      "problems": []
+    },
+    {
+      "number": 11,
+      "title": "Integration keys come only from ctx.secrets; nothing sensitive in logs",
+      "passed": true,
+      "not_run": null,
+      "problems": []
+    },
+    {
+      "number": 12,
+      "title": "Dialogues pass with --traffic on",
+      "passed": true,
+      "not_run": null,
+      "problems": []
+    }
+  ]
+}
